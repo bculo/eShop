@@ -35,5 +35,17 @@ namespace API.Controllers
 
             return Ok(product);
         }
+
+        [HttpGet("brands")]
+        public async Task<IActionResult> GetProductBrands()
+        {
+            return Ok(await _repo.GetProductBrandsAsync());
+        }
+
+        [HttpGet("types")]
+        public async Task<IActionResult> GetProductTypes()
+        {
+            return Ok(await _repo.GetProductTypesAsync());
+        }
     }
 }
